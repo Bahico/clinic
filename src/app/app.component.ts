@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {AuthorizationService} from "./authorization/authorization.service";
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'frontend';
+
+  constructor(
+    private readonly service: AuthorizationService,
+    private readonly translate: TranslateService
+  ) {
+
+    translate.setDefaultLang('en')
+    if (localStorage.getItem('language') == '2') {
+      translate.use('ru')
+    } else if (localStorage.getItem('language') == '3') {
+      translate.use('uz')
+    }
+
+    service.detail().subscribe(data=>{
+      service.user = data
+    }, () => {
+      console.log('http://localhost:4200/authorization/login <= Login')
+    })
+  }
 }
+
+export const url = 'http://127.0.0.1:8000/'
+export const img = 'http://127.0.0.1:8000'

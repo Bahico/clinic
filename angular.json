@@ -28,7 +28,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
+              "node_modules/ngx-photo-editor/photo-editor.css"
             ],
             "scripts": []
           },

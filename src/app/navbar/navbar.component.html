@@ -1,0 +1,20 @@
+<nav class="navbar" [ngClass]="{'navbar-space': service.user}">
+  <div class="logo"><img src="assets/logo-black.png" alt=""></div>
+  <ul nz-menu nzMode="horizontal" class="navbar-list">
+    <li nz-menu-item routerLink="/">{{'navbar.home' | translate}}</li>
+    <li nz-menu-item routerLink="/product">{{'navbar.products' | translate}}</li>
+    <li nz-menu-item routerLink="/employee">{{'navbar.employees' | translate}}</li>
+    <li nz-menu-item (click)="clickPostCreate()" *ngIf="service.user">{{'navbar.product_create' | translate}}</li>
+    <li nz-menu-item (click)="clickEmployeeCreate()"  *ngIf="service.user">{{'navbar.employee_create' | translate}}</li>
+    <li nz-submenu [nzTitle]="language_text">
+      <ul>
+        <li nz-menu-item *ngIf="language !== '3'" (click)="clickLanguage(3)">🇺🇿 O`zbekcha</li>
+        <li nz-menu-item *ngIf="language !== '2'" (click)="clickLanguage(2)">🇷🇺 Русский</li>
+        <li nz-menu-item *ngIf="language !== '1' && language" (click)="clickLanguage(1)">🇺🇸 ENGLISH</li>
+        <li nz-menu-divider></li>
+        <li nz-menu-item>{{language_text}}</li>
+      </ul>
+    </li>
+  </ul>
+  <button nz-button nzType="primary" nzSize="large" (click)="clickLogout()" *ngIf="service.user">{{'navbar.logout' | translate}}</button>
+</nav>

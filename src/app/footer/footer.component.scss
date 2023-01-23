@@ -1,0 +1,55 @@
+.footer {
+  width: 100%;
+  float: left;
+  background-color: #252525;
+  height: auto;
+  padding-bottom: 50px;
+  box-shadow: 0 24px 19px -1px #222223;
+  position: relative;
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 150px;
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+    justify-content: center;
+    display: flex;
+    img {
+      //width: 200px;
+      height: 80px;
+      object-fit: cover;
+      //align-items: center;
+      //mix-blend-mode: multiply;
+    }
+    .row {
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin-right: -15px;
+      margin-left: -15px;
+      .col-lg-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 30px;
+        span {
+          margin-right: 15px;
+        }
+      }
+      .col-sm-6 {
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+    }
+
+  }
+}
+
+::ng-deep h1 {
+  color: white;
+}

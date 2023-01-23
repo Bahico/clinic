@@ -1,0 +1,50 @@
+.navbar {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: #ceeeef;
+  z-index: 900;
+  .logo {
+    margin-left: 50px;
+    background: none;
+    img {
+      width: 200px;
+      height: 80px;
+      object-fit: cover;
+      align-items: center;
+      mix-blend-mode: multiply;
+    }
+  }
+
+  .navbar-list {
+    background: none;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    ::ng-deep .ant-menu-item {
+      background: none;
+      align-items: center;
+      display: flex;
+      color: rgba(35, 35, 35, 0.8);
+    }
+  }
+  ::ng-deep .ant-menu-horizontal {
+    border-bottom: none;
+  }
+  ::ng-deep .ant-menu-submenu {
+    align-items: center;
+    display: flex;
+    color: rgba(35, 35, 35, 0.8);
+  }
+
+}
+
+.navbar {
+  justify-content: space-between;
+  button {
+    margin: 15px 15px 15px 0;
+  }
+}

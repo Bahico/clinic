@@ -1,0 +1,105 @@
+
+.title-container {
+  margin-left: 15vw;
+  margin-right: 15vw;
+  margin-top: 100px;
+  //display: block;
+  text-align: center;
+  align-items: center;
+
+  h1 {
+    //float: left;
+    font-size: 40px;
+    color: rgba(35, 35, 35, 0.8);
+    font-weight: 700;
+  }
+  .description {
+    margin-top: 30px;
+    color: rgba(35, 35, 35, 0.8);
+  }
+}
+
+.product-search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  input {
+    border: none;
+    background: none;
+    font-size: 25px;
+    color: rgba(35, 35, 35, 0.8);
+    width: 50vw;
+    opacity: 0.5;
+    transition: 0.3s;
+  }
+  input:focus-visible {
+    background: none;
+    outline: none;
+    opacity: 1;
+  }
+  input:hover {
+    opacity: 1;
+  }
+  span {
+    color: rgba(35, 35, 35, 0.8);
+    font-size: 30px;
+  }
+}
+
+.product-list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .container {
+    margin-right: 15vh;
+    margin-left: 15vh;
+    margin-bottom: 30px;
+    width: 60vw;
+    display: flex;
+    flex-wrap: wrap;
+    .product {
+      width: calc((100% / 3) - 60px);
+      height: auto;
+      margin: 30px;
+      background: rgb(250, 250, 250);
+      transition: .5s;
+      box-shadow: 0 0 20px rgb(219, 219, 219);
+      border-radius: .3rem;
+      padding: 10px 20px;
+      img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: .3rem;
+      }
+      .name {
+        width: 300px;
+        font-size: 22px;
+        font-weight: 800;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        border-radius: .3rem;
+        margin-top: 5px;
+        justify-content: center;
+        color: white;
+        background: #1a90ff;
+        height: 50px;
+        transition: .3s;
+        p {
+          margin: 0;
+        }
+      }
+      .name:hover {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.68);
+      }
+    }
+    .product:hover {
+      box-shadow: 0 0 100px rgb(219, 219, 219);
+      transition: .5s;
+    }
+  }
+}
