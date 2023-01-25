@@ -2,6 +2,7 @@ import { Component, EventEmitter, OnInit } from '@angular/core';
 import {img} from "../../app.component";
 import {EmployeeModel} from "../employee.model";
 import {EmployeeService} from "../employee.service";
+import {AuthorizationService} from "../../authorization/authorization.service";
 
 @Component({
   selector: 'employee-detail',
@@ -14,7 +15,8 @@ export class DetailComponent implements OnInit {
   user?: EmployeeModel;
   active = new EventEmitter<any>()
   constructor(
-    private readonly service: EmployeeService
+    private readonly service: EmployeeService,
+    public readonly profileService: AuthorizationService
   ) { }
 
   ngOnInit(): void {

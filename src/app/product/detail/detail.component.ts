@@ -3,6 +3,7 @@ import {ActivatedRoute} from "@angular/router";
 import {ProductService} from "../product.service";
 import {ProductModel} from "../product.model";
 import {img} from "../../app.component";
+import {AuthorizationService} from "../../authorization/authorization.service";
 
 @Component({
   selector: 'app-detail',
@@ -17,7 +18,8 @@ export class DetailComponent implements OnInit {
   active = new EventEmitter<any>(true);
   constructor(
     private readonly activaRoute: ActivatedRoute,
-    private readonly service: ProductService
+    private readonly service: ProductService,
+    public readonly profileService: AuthorizationService
   ) {}
 
   ngOnInit(): void {}
